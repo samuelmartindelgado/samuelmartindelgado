@@ -23,9 +23,10 @@ Aquí publico las herramientas que uso y lo que pruebo en mi laboratorio de casa
 
 | Proyecto | De qué va |
 |---|---|
+| [windows-hardening-audit](https://github.com/samuelmartindelgado/windows-hardening-audit) | Auditoría de seguridad de Windows en un comando: 23 comprobaciones de solo lectura (SMBv1, LLMNR, NTLM, RDP, LAPS, BitLocker, parches...) e informe HTML con semáforo. Probado en CI con PowerShell 5.1 y 7 |
 | [homelab](https://github.com/samuelmartindelgado/homelab) | Mi laboratorio gestionado como el de una empresa: copias que se comprueban solas, monitor que solo avisa cuando algo cambia, baúl de secretos cifrado y encendido remoto |
 
-Próximamente: herramientas de PowerShell para Active Directory, informes automáticos de Microsoft 365 y una auditoría de hardening para Windows Server.
+Próximamente: herramientas de PowerShell para Active Directory, probadas en un laboratorio de dominio propio.
 
 ### 🧭 Cómo trabajo
 
