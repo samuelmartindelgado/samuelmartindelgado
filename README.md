@@ -19,11 +19,27 @@ Aquí publico las herramientas que uso y lo que pruebo en mi laboratorio de casa
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 ![Debian](https://img.shields.io/badge/Debian-A81D33?style=flat&logo=debian&logoColor=white)
 
-### 📂 Proyectos
+### 🩺 Kit del técnico de sistemas
+
+Herramientas de PowerShell **de solo lectura** para revisar un equipo Windows en minutos: no cambian nada, generan informe HTML y JSON, y se prueban solas en cada cambio (CI con PowerShell 5.1 y 7). Las ejecuto en mis propios equipos antes de publicarlas.
+
+| Herramienta | Qué revisa | Pruebas |
+|---|---|---|
+| [sysadmin-health-check](https://github.com/samuelmartindelgado/sysadmin-health-check) | **Todo el kit en un comando** e informe único con semáforo | [![CI](https://github.com/samuelmartindelgado/sysadmin-health-check/actions/workflows/ci.yml/badge.svg)](https://github.com/samuelmartindelgado/sysadmin-health-check/actions) |
+| [windows-hardening-audit](https://github.com/samuelmartindelgado/windows-hardening-audit) | 23 comprobaciones de seguridad: SMBv1, LLMNR, NTLM, RDP, LAPS, BitLocker... | [![CI](https://github.com/samuelmartindelgado/windows-hardening-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/samuelmartindelgado/windows-hardening-audit/actions) |
+| [patch-status-report](https://github.com/samuelmartindelgado/patch-status-report) | Último parche, actualizaciones pendientes o fallidas, reinicio pendiente | [![CI](https://github.com/samuelmartindelgado/patch-status-report/actions/workflows/ci.yml/badge.svg)](https://github.com/samuelmartindelgado/patch-status-report/actions) |
+| [pc-inventory](https://github.com/samuelmartindelgado/pc-inventory) | Inventario del equipo a CSV para toda la oficina: serie, RAM, discos, TPM, licencia, software | [![CI](https://github.com/samuelmartindelgado/pc-inventory/actions/workflows/ci.yml/badge.svg)](https://github.com/samuelmartindelgado/pc-inventory/actions) |
+| [writable-path-audit](https://github.com/samuelmartindelgado/writable-path-audit) | Permisos mal puestos que dejarían a un usuario normal hacerse administrador | [![CI](https://github.com/samuelmartindelgado/writable-path-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/samuelmartindelgado/writable-path-audit/actions) |
+| [autostart-inventory](https://github.com/samuelmartindelgado/autostart-inventory) | Todo lo que arranca solo, con su firma digital y marcas de lo sospechoso | [![CI](https://github.com/samuelmartindelgado/autostart-inventory/actions/workflows/ci.yml/badge.svg)](https://github.com/samuelmartindelgado/autostart-inventory/actions) |
+| [stale-local-accounts](https://github.com/samuelmartindelgado/stale-local-accounts) | Cuentas locales olvidadas, Administrador o Invitado activos, admins de más | [![CI](https://github.com/samuelmartindelgado/stale-local-accounts/actions/workflows/ci.yml/badge.svg)](https://github.com/samuelmartindelgado/stale-local-accounts/actions) |
+| [cert-expiry-scanner](https://github.com/samuelmartindelgado/cert-expiry-scanner) | Certificados del equipo a punto de caducar y qué servicio fallará | [![CI](https://github.com/samuelmartindelgado/cert-expiry-scanner/actions/workflows/ci.yml/badge.svg)](https://github.com/samuelmartindelgado/cert-expiry-scanner/actions) |
+| [time-drift-check](https://github.com/samuelmartindelgado/time-drift-check) | Hora mal sincronizada antes de que falle Kerberos o un certificado | [![CI](https://github.com/samuelmartindelgado/time-drift-check/actions/workflows/ci.yml/badge.svg)](https://github.com/samuelmartindelgado/time-drift-check/actions) |
+| [event-log-size-check](https://github.com/samuelmartindelgado/event-log-size-check) | Registros de eventos que se sobrescriben en horas y no dejan rastro | [![CI](https://github.com/samuelmartindelgado/event-log-size-check/actions/workflows/ci.yml/badge.svg)](https://github.com/samuelmartindelgado/event-log-size-check/actions) |
+
+### 🏠 Laboratorio
 
 | Proyecto | De qué va |
 |---|---|
-| [windows-hardening-audit](https://github.com/samuelmartindelgado/windows-hardening-audit) | Auditoría de seguridad de Windows en un comando: 23 comprobaciones de solo lectura (SMBv1, LLMNR, NTLM, RDP, LAPS, BitLocker, parches...) e informe HTML con semáforo. Probado en CI con PowerShell 5.1 y 7 |
 | [homelab](https://github.com/samuelmartindelgado/homelab) | Mi laboratorio gestionado como el de una empresa: copias que se comprueban solas, monitor que solo avisa cuando algo cambia, baúl de secretos cifrado y encendido remoto |
 
 Próximamente: herramientas de PowerShell para Active Directory, probadas en un laboratorio de dominio propio.
@@ -31,7 +47,7 @@ Próximamente: herramientas de PowerShell para Active Directory, probadas en un 
 ### 🧭 Cómo trabajo
 
 - Primero en el laboratorio, luego en producción, y siempre con copia previa.
-- Todo lo que cambia algo tiene modo de prueba (`-WhatIf`) antes de tocar nada.
+- Las herramientas de revisión son de solo lectura; lo que cambia algo tiene modo de prueba (`-WhatIf`).
 - Las contraseñas nunca van dentro de un script.
 
 ### 📫 Contacto
